@@ -1,0 +1,14 @@
+/*
+Theme Name: Unity
+Author: Code for Recovery
+Author URI: https://code4recovery.org
+Description: A WordPress theme for A.A. service entities
+Version: 1.0
+Tested up to: 5.4
+*/
+
+@import "tailwindcss";
+
+body.admin-bar.min-h-dvh {
+  min-height: calc(100dvh - 32px);
+}
