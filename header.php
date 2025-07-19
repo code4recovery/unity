@@ -5,10 +5,21 @@
     <?php wp_head() ?>
 </head>
 
-<body <?php body_class("min-h-dvh flex flex-col") ?>>
-    <header class="bg-cyan-700 py-7">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-white font-bold text-4xl px-6"><?php bloginfo('name'); ?></h1>
+<body <?php body_class("grid min-h-dvh") ?>>
+
+    <header class="bg-cyan-700 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-7 flex items-center gap-6 w-full justify-between">
+            <h1 class="font-bold text-4xl">
+                <a class="cursor-pointer hover:underline" href="/"><?php bloginfo('name') ?></a>
+            </h1>
+            <?php wp_nav_menu([
+                'menu_class' => 'flex gap-8 text-lg font-bold'
+            ]) ?>
+            <button class="px-3 py-1 border border-cyan-200 rounded">
+                Español
+            </button>
         </div>
     </header>
-    <main class="max-w-7xl mx-auto py-7 flex flex-col gap-5 grow px-6 text-lg">
+
+    <div class="gap-10 grid grid-cols-3 grow max-w-7xl mx-auto px-6 py-7 w-full">
+        <main class="col-span-2 prose lg:prose-xl max-w-full">

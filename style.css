@@ -8,7 +8,23 @@ Tested up to: 5.4
 */
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 body.admin-bar.min-h-dvh {
   min-height: calc(100dvh - 32px);
+}
+
+.prose {
+  img {
+    @apply rounded-xl;
+  }
+}
+
+#searchform {
+  div {
+    @apply flex gap-3;
+    input {
+      @apply border border-neutral-400 py-1 px-4 rounded;
+    }
+  }
 }
