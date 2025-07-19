@@ -1,7 +1,98 @@
-<ul id="sidebar" role="complementary">
+<ul id="sidebar" role="complementary" class="grid gap-8">
     <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) { ?>
         <li>
-            <?php get_search_form(); ?>
+            <form role="search" method="get" action="/" class="flex gap-3">
+                <label class="sr-only" for="s">Search for:</label>
+                <input type="text" value="" name="s" id="s"
+                    class="border border-neutral-400 grow py-1 px-4 rounded text-lg">
+                <input type="submit" value="Search" class="border border-neutral-400 py-1 px-4 rounded  text-lg">
+            </form>
+        </li>
+
+        <li>
+            <h3 class="font-bold border-b border-neutral-300 pb-2 mb-4 text-xl">Upcoming Events</h3>
+            <ul class="flex flex-col gap-4">
+                <?php
+                $events = [
+                    [
+                        'month' => 'JUL',
+                        'day' => 23,
+                        'time' => '7:00 pm – 8:00 pm',
+                        'title' => 'Interpretation & Translation',
+                    ],
+                    [
+                        'month' => 'JUL',
+                        'day' => 24,
+                        'time' => '7:00 pm – 8:00 pm',
+                        'title' => 'Bridging the Gap',
+                    ],
+                    [
+                        'month' => 'JUL',
+                        'day' => 26,
+                        'time' => '9:00 am – 10:00 am',
+                        'title' => 'Public Information / Cooperation with the Professional Community',
+                    ],
+                    [
+                        'month' => 'JUL',
+                        'day' => 26,
+                        'time' => '11:00 am – 12:00 pm',
+                        'title' => 'Archives Committee',
+                    ],
+                    [
+                        'month' => 'JUL',
+                        'day' => 26,
+                        'time' => '11:00 am – 12:00 pm',
+                        'title' => 'Accessibilities Committee',
+                    ],
+                ];
+                foreach ($events as $event) { ?>
+                    <li class="flex gap-4 items-center">
+                        <div class="rounded bg-neutral-200 px-5 py-2 flex flex-col justify-center">
+                            <div class="text-sm text-center"><?php echo $event['month'] ?></div>
+                            <div class="text-2xl"><?php echo $event['day'] ?></div>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <a href="" class="font-semibold hover:underline"><?php echo $event['title'] ?></a>
+                            <div class="text-sm"><?php echo $event['time'] ?></div>
+                        </div>
+                    </li>
+                <?php } ?>
+            </ul>
+        </li>
+
+        <li>
+            <h3 class="font-bold border-b border-neutral-300 pb-2 mb-4 text-xl">New Posts and Materials</h3>
+            <ul class="flex flex-col gap-4">
+                <?php
+                $news = [
+                    [
+                        'title' => 'CNCA Website Survey',
+                        'date' => 'Jul 19',
+                    ],
+                    [
+                        'title' => 'Comments July 2025',
+                        'date' => 'Jul 18',
+                    ],
+                    [
+                        'title' => 'June 2025 ACM Agenda',
+                        'date' => 'Jul 17',
+                    ],
+                    [
+                        'title' => '2025 Summer Assembly flyer',
+                        'date' => 'Jul 14'
+                    ],
+                    [
+                        'title' => 'New Trustees Announcement',
+                        'date' => 'Jul 14'
+                    ],
+                ];
+                foreach ($news as $item) { ?>
+                    <li>
+                        <a href="" class="font-semibold hover:underline"><?php echo $item['title'] ?></a>
+                        <div class="text-sm"><?php echo $item['date'] ?></div>
+                    </li>
+                <?php } ?>
+            </ul>
         </li>
 
         <?php if (is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged()) { ?>

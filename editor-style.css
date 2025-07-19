@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.editor-styles-wrapper {
+  @apply prose lg:prose-xl max-w-full font-sans;
+
+  img {
+    @apply rounded-xl;
+  }
+}

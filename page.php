@@ -4,7 +4,10 @@
     <?php while (have_posts()) {
         the_post(); ?>
         <h2 class="font-bold text-3xl"><?php the_title() ?></h2>
-        <?php the_content() ?>
+
+        <div class="prose lg:prose-xl max-w-full my-8">
+            <?php the_content() ?>
+        </div>
     <?php } ?>
 <?php } else { ?>
     <p>There are no posts!</p>

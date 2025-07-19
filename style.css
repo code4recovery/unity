@@ -12,19 +12,14 @@ Tested up to: 5.4
 
 body.admin-bar.min-h-dvh {
   min-height: calc(100dvh - 32px);
+  @apply from-cyan-900;
+  #wpadminbar {
+    @apply bg-cyan-900;
+  }
 }
 
 .prose {
   img {
     @apply rounded-xl;
-  }
-}
-
-#searchform {
-  div {
-    @apply flex gap-3;
-    input {
-      @apply border border-neutral-400 py-1 px-4 rounded;
-    }
   }
 }
