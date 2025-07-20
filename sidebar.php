@@ -1,11 +1,11 @@
 <ul id="sidebar" role="complementary" class="grid gap-8">
     <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) { ?>
         <li>
-            <form role="search" method="get" action="/" class="flex gap-3">
+            <form role="search" method="get" action="/" class="flex gap-3 max-w-full">
                 <label class="sr-only" for="s">Search for:</label>
-                <input type="text" value="" name="s" id="s"
-                    class="border border-neutral-400 grow py-1 px-4 rounded text-lg">
-                <input type="submit" value="Search" class="border border-neutral-400 py-1 px-4 rounded  text-lg">
+                <input type="text" value="<?php the_search_query() ?>" name="s" id="s"
+                    class="border border-neutral-400 py-1 px-4 rounded text-lg w-full">
+                <input type="submit" value="Search" class="border border-neutral-400 py-1 px-4 rounded text-lg">
             </form>
         </li>
 

@@ -8,22 +8,34 @@
     <?php wp_head() ?>
 </head>
 
-<body <?php body_class("bg-linear-0 from-cyan-700 to-neutral-200 flex flex-col min-h-dvh") ?>>
+<body <?php body_class("bg-linear-0 flex flex-col from-cyan-700 min-h-dvh to-neutral-200") ?>>
 
     <header class="bg-cyan-700 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-7 flex items-center gap-6 w-full justify-between">
-            <h1 class="font-bold text-4xl">
-                <a class="cursor-pointer hover:underline" href="/"><?php bloginfo('name') ?></a>
-            </h1>
+        <div class="flex gap-6 items-center justify-between max-w-7xl mx-auto px-6 py-7 text-lg w-full">
+            <div class="flex gap-3 items-center">
+                <a class="cursor-pointer lg:hidden">
+                    <svg class="size-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 12h16" />
+                        <path d="M4 18h16" />
+                        <path d="M4 6h16" />
+                    </svg>
+                </a>
+                <h1 class="font-bold text-4xl">
+                    <a class="cursor-pointer hover:underline" href="/"><?php bloginfo('name') ?></a>
+                </h1>
+            </div>
             <?php wp_nav_menu([
-                'menu_class' => 'flex gap-8 text-lg font-bold'
+                'container' => false,
+                'menu_class' => 'font-bold gap-3 hidden lg:flex',
+                'walker' => new Unity_Menu_Walker()
             ]) ?>
-            <a class="px-3 py-1 border border-cyan-200 cursor-pointer rounded" href="/es">
+            <a class="border border-cyan-200 cursor-pointer px-3 py-1 rounded" href="/es">
                 Español
             </a>
         </div>
     </header>
 
     <div class="bg-white grow">
-        <div class="gap-10 grid grid-cols-3 max-w-7xl mx-auto px-6 py-10 w-full">
-            <main class="col-span-2">
+        <div class="gap-10 grid lg:grid-cols-3 max-w-7xl mx-auto px-6 py-10 w-full">
+            <main class="lg:col-span-2">

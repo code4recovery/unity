@@ -22,4 +22,7 @@ body.admin-bar.min-h-dvh {
   img {
     @apply rounded-xl;
   }
+  strong {
+    @apply font-extrabold;
+  }
 }
