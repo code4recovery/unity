@@ -1,8 +1,10 @@
 </main>
 
-<aside>
-    <?php get_sidebar() ?>
-</aside>
+<?php if (!is_post_type_archive('tsml_meeting')) { ?>
+    <aside class="w-1/3">
+        <?php get_sidebar() ?>
+    </aside>
+<?php } ?>
 
 </div>
 </div>

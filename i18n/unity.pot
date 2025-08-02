@@ -1,0 +1,55 @@
+# Copyright (C) 2025 Code for Recovery
+# This file is distributed under the same license as the Unity theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Unity 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/unity\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-02T16:50:23+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: unity\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Unity"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A WordPress theme for A.A. service entities"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Code for Recovery"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://code4recovery.org"
+msgstr ""
+
+#: functions/menus.php:5
+msgid "Primary Menu"
+msgstr ""
+
+#: sidebar.php:6
+msgid "Search for:"
+msgstr ""
+
+#: sidebar.php:15
+msgid "Search"
+msgstr ""
+
+#: sidebar.php:21
+msgid "Upcoming Events"
+msgstr ""
+
+#: sidebar.php:73
+msgid "New Posts and Materials"
+msgstr ""

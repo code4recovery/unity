@@ -26,16 +26,15 @@
                 </h1>
             </div>
             <?php wp_nav_menu([
+                'theme_location' => 'primary',
                 'container' => false,
                 'menu_class' => 'font-bold gap-3 hidden lg:flex',
-                'walker' => new Unity_Menu_Walker()
+                'walker' => new Unity_Primary_Menu_Walker()
             ]) ?>
-            <a class="border border-cyan-200 cursor-pointer px-3 py-1 rounded" href="/es">
-                Español
-            </a>
+            <?php unity_language_toggle() ?>
         </div>
     </header>
 
     <div class="bg-white grow">
-        <div class="gap-10 grid lg:grid-cols-3 max-w-7xl mx-auto px-6 py-10 w-full">
-            <main class="lg:col-span-2">
+        <div class="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto px-6 py-10 w-full">
+            <main class="flex-grow lg:w-2/3">

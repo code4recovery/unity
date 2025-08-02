@@ -26,12 +26,11 @@ A WordPress theme for A.A. service entities.
 ## Developing
 
 ```
-npm i
-npx @tailwindcss/cli -i ./style.css -o ./style.min.css --watch
+npm i && npm run dev
 ```
 
-## Build for production
+## Before committing changes
 
 ```
-npx @tailwindcss/cli -i ./style.css -o ./style.min.css --production --minify
+npm run build && wp i18n make-pot . ./i18n/unity.pot
 ```

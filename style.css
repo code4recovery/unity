@@ -25,4 +25,7 @@ body.admin-bar.min-h-dvh {
   strong {
     @apply font-extrabold;
   }
+  a {
+    @apply text-cyan-600 hover:text-cyan-800;
+  }
 }

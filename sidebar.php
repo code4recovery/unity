@@ -1,16 +1,24 @@
 <ul id="sidebar" role="complementary" class="grid gap-8">
     <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) { ?>
         <li>
-            <form role="search" method="get" action="/" class="flex gap-3 max-w-full">
-                <label class="sr-only" for="s">Search for:</label>
+            <form role="search" method="get" action="/"
+                class="flex gap-3 max-w-full relative text-neutral-700 focus-within:text-black">
+                <label class="sr-only" for="s"><?php _e('Search for:', 'unity') ?></label>
+                <svg class="absolute left-2.5 size-5 top-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m21 21-4.34-4.34" />
+                    <circle cx="11" cy="11" r="8" />
+                </svg>
                 <input type="text" value="<?php the_search_query() ?>" name="s" id="s"
-                    class="border border-neutral-400 py-1 px-4 rounded text-lg w-full">
-                <input type="submit" value="Search" class="border border-neutral-400 py-1 px-4 rounded text-lg">
+                    class="border border-neutral-400 py-1 px-4 rounded text-lg w-full pl-9">
+                <button type="submit" class="border border-neutral-400 py-1 px-4 rounded text-lg">
+                    <?php _e('Search', 'unity') ?>
+                </button>
             </form>
         </li>
 
         <li>
-            <h3 class="font-bold border-b border-neutral-300 pb-2 mb-4 text-xl">Upcoming Events</h3>
+            <h3 class="font-bold border-b border-neutral-300 pb-2 mb-4 text-xl"><?php _e('Upcoming Events', 'unity') ?></h3>
             <ul class="flex flex-col gap-4">
                 <?php
                 $events = [
@@ -61,7 +69,9 @@
         </li>
 
         <li>
-            <h3 class="font-bold border-b border-neutral-300 pb-2 mb-4 text-xl">New Posts and Materials</h3>
+            <h3 class="font-bold border-b border-neutral-300 pb-2 mb-4 text-xl">
+                <?php _e('New Posts and Materials', 'unity') ?>
+            </h3>
             <ul class="flex flex-col gap-4">
                 <?php
                 $news = [
